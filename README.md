@@ -244,24 +244,3 @@ run;
 
 
 
-
-/*  */
-/*  */
-/* data BowlingStats; */
-/*   set merged_data; */
-/*   where not missing(bowler); */
-/*   format overs_bowled 4.1; */
-/*   overs_bowled + 0.1;  */
-/* run; */
-/*  */
-/* proc sql; */
-/*   create table BowlingPerSeason as */
-/*   select season, bowler, sum(overs_bowled) as total_overs_bowled */
-/*   from BowlingStats */
-/*   group by season, bowler */
-/*   order by season, total_overs_bowled desc; */
-/* quit; */
-/*  */
-/* proc print data=BowlingPerSeason (obs=10); */
-/*   title "Top 10 Bowlers by Overs Bowled per Season"; */
-/* run; */
