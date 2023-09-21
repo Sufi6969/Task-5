@@ -244,3 +244,30 @@ run;
 
 
 
+/******************************* Top Team to Endorse ******************/
+
+proc print data=team_wins (obs=1);
+title" CASE I : Top Team to Endorse";
+run;
+
+/***************************** Top Player to Endrose *****************/
+
+proc print data=player_of_match;
+ where monotonic() <= 1;
+ title " CASE II : Top Player to Endorse";
+quit;
+
+/********************************************* Top Batsman ***************************************/
+
+proc print data=batting (obs=1 );
+title" CASE III : Top Batsman to Endorse";
+run;
+
+/************************** Total Contribution to Overall Run per Season *****************/
+
+proc print data=player_of_match;
+where monotonic()=3  ;
+ title " Case VI : Allrounder Player to Endorse";
+quit;
+
+
